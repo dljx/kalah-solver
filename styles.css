@@ -145,10 +145,11 @@ body {
 .board {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--gap);
-  width: 100%;
-  padding: var(--gap);
-  border-radius: var(--radius);
+  gap: clamp(4px, 1.1vw, 7px);
+  width: min(88vw, 14vh, 200px); /* small: ~half a phone screen tall */
+  margin: 0 auto;
+  padding: clamp(5px, 1.4vw, 8px);
+  border-radius: 14px;
   background: linear-gradient(165deg, var(--panel-2), var(--panel));
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.07),
@@ -161,18 +162,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  height: clamp(56px, 15vw, 78px);
-  border-radius: 16px;
+  gap: 8px;
+  height: clamp(32px, 8.5vw, 46px);
+  border-radius: 11px;
   background: radial-gradient(120% 140% at 50% 0%, #0c0e14, var(--hole));
   box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.8), inset 0 -1px 0 rgba(255, 255, 255, 0.05);
 }
-.store .store-num { font-family: var(--font-display); font-weight: 800; font-size: clamp(24px, 7vw, 34px); }
-.store .store-tag { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-dim); }
-.store.top { box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(92, 242, 226, 0.18); }
-.store.bottom { box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(255, 209, 102, 0.2); }
-.store.top .store-num { color: var(--opp-0); }
-.store.bottom .store-num { color: var(--you-0); }
+.store .store-num { font-family: var(--font-display); font-weight: 800; font-size: clamp(16px, 5vw, 24px); }
+.store .store-tag { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-dim); white-space: nowrap; }
+.store.top { box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(255, 209, 102, 0.2); }
+.store.bottom { box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(92, 242, 226, 0.18); }
+.store.top .store-num { color: var(--you-0); }
+.store.bottom .store-num { color: var(--opp-0); }
 
 .pit {
   position: relative;
@@ -190,7 +191,7 @@ body {
   z-index: 2;
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(18px, 5.4vw, 26px);
+  font-size: clamp(13px, 4vw, 19px);
   color: var(--ink);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }

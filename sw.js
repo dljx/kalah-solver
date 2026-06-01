@@ -1,7 +1,7 @@
 // Service worker: precache the app shell so the game loads instantly and works
 // offline (the engine runs entirely on-device). Bump CACHE when assets change.
 
-const CACHE = 'kalah-v1';
+const CACHE = 'kalah-v2';
 const ASSETS = [
   './',
   './index.html',

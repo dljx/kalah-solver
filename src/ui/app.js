@@ -92,12 +92,13 @@ function makePit(idx) {
 
 function buildBoard() {
   boardEl.innerHTML = '';
-  boardEl.appendChild(makeStore(13, 'top', 'Opponent store'));
+  // Board rotated 180°: you (P2) are top-right, the opponent (P1) is bottom-left.
+  boardEl.appendChild(makeStore(6, 'top', 'Your store')); // your store on top
   for (let r = 0; r < 6; r++) {
-    boardEl.appendChild(makePit(r)); // left column, your pits 0..5
-    boardEl.appendChild(makePit(12 - r)); // right column, opponent pits 12..7
+    boardEl.appendChild(makePit(7 + r)); // left column, opponent pits 7..12
+    boardEl.appendChild(makePit(5 - r)); // right column, your pits 5..0
   }
-  boardEl.appendChild(makeStore(6, 'bottom', 'Your store'));
+  boardEl.appendChild(makeStore(13, 'bottom', 'Opponent store')); // opponent store on bottom
   renderAll();
 }
 
@@ -269,7 +270,7 @@ function oppInput() {
   if (isTerminal(board)) return end();
   phase = 'opp-input';
   boardEl.classList.add('opp-input');
-  setConsole('await', "Opponent's turn", '▼', 'Tap the pit they played (top / right)');
+  setConsole('await', "Opponent's turn", '▼', 'Tap the pit they played (left column)');
 }
 
 async function onPitTap(idx) {
