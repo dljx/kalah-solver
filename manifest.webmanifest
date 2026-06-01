@@ -1,0 +1,19 @@
+{
+  "name": "Vertical Kalah · Solver",
+  "short_name": "Kalah",
+  "description": "A vertical Kalah(6,3) solver that plays your perfect move.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0b0e",
+  "theme_color": "#0a0b0e",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "kalah-solver",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Vertical Kalah(6,3) — in-browser perfect-play solver + mobile PWA",
+  "scripts": {
+    "serve": "python -m http.server 8000",
+    "check:web": "node tools/check_web.mjs"
+  }
+}
